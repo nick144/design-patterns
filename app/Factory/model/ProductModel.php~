@@ -1,0 +1,27 @@
+<?php
+
+
+namespace Factory\model;
+
+use Factory\lib\DbConnect as DbConnect;
+
+class ProductModel extends DbConnect{
+
+    public function getProductById($id){
+        $query = "SELECT * FROM products WHERE id = ?";
+        
+        $statement = $this->con->prepare($query);
+        $statement->bind('i', $id);
+
+        $statement->execute();
+
+        $result = array();
+
+        return $statement->fetch();        
+     }
+
+    public function getAllProduct(){
+        
+    }
+    
+}

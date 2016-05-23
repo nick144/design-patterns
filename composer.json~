@@ -1,0 +1,16 @@
+{
+    "name": "dominic/design_patterns",
+    "description": "Php Design Patterns",
+    "authors": [
+        {
+            "name": "Dominic",
+            "email": "docsonic47@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+	"psr-4":{
+	    "Factory\\": "app/Factory"
+	}
+    },
+}

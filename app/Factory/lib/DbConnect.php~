@@ -1,0 +1,20 @@
+<?php
+
+namespace Factory\lib;
+
+class dbconnect{
+
+    public $con;
+    
+    function __construct(){
+        $this->con = new mysqli($config['dbhost'], $config['dbuser'], $config['dbpass'], $config['database']);
+
+        if($this->con->connect_errno > 0){
+            die('Unable to connect to database ['.$this->con->connect_error.']')
+        }
+    }
+
+    function db(){
+        return this->con;
+    }
+}

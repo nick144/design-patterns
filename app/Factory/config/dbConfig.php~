@@ -1,0 +1,14 @@
+<?php
+
+namespace Factory\config;
+
+class dbConfig{
+
+    public $config;
+
+    $this->config['dbhost'] = 'localhost';
+    $this->config['dbuser'] = 'root';
+    $this->config['dbpass'] = '';
+    $this->config['databse']= 'website';
+
+}
